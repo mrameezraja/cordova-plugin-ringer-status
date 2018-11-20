@@ -1,7 +1,7 @@
 cordova-plugin-ringer-status
 ====================
 
-Detects current status of device ringer & fires an event if status changed.
+Detects current status of device ringer & fires an event if status changed. Uses `SharkfoodMuteSwitchDetector` utility.
 
 Installation
 ------------
