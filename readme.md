@@ -40,6 +40,15 @@ cordova.plugins.ringer.vibrate
 </code>
 </pre>
 
+Events
+------
+<pre>
+<code>
+    window.addEventListener('didRingerChanged', (event) => {
+
+    });
+</code>
+</pre>
 
 Supported Platforms
 -------------------
