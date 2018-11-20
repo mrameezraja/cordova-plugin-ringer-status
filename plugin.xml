@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.mrameezraja.ringerstatus"
+        version="1.0.0">
+
+    <name>RMRingerStatus</name>
+
+    <description>gets the current status of ringer.</description>
+
+    <repo>https://github.com/mrameezraja/cordova-plugin-ringer-status</repo>
+
+    <license>MIT</license>
+
+    <author>Rameez Raja</author>
+
+    <!-- cordova -->
+    <engines>
+        <engine name="cordova" version=">=3.6.0" />
+    </engines>
+
+    <!-- js -->
+    <js-module src="www/rm-ringer-status.js" name="RMRingerStatus">
+        <clobbers target="cordova.plugins.ringer" />
+    </js-module>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="CDVRMRinger">
+                <param name="ios-package" value="CDVRMRinger" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/SharkfoodMuteSwitchDetector.h" />
+        <source-file src="src/ios/SharkfoodMuteSwitchDetector.m" />
+        <header-file src="src/ios/CDVRMRinger.h" />
+        <source-file src="src/ios/CDVRMRinger.m" />
+    </platform>
+
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="CDVRMRinger">
+                <param name="android-package" value="com.mrameezraja.plugins.CDVRMRinger" />
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.VIBRATE" />
+        </config-file>
+
+        <source-file src="src/android/CDVRMRinger.java" target-dir="src/com/mrameezraja/plugins" />
+    </platform>
+
+</plugin>
