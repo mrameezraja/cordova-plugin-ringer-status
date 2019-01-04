@@ -1,0 +1,22 @@
+{
+    "version": "1.0.0",
+    "name": "com.mrameezraja.ringerstatus",
+    "cordova_name": "RMRingerStatus",
+    "description": "gets the current status of ringer.",
+    "license": "MIT License",
+    "platforms": [
+        "ios",
+        "android"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.0.0"
+        }
+    ],
+    "keywords": [
+        "ringer",
+        "switch",
+        "ecosystem:cordova"
+    ]
+}
